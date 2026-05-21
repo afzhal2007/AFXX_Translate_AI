@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFXX Translate AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="navbar reveal">
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-language"></i></div>
+      <div>
+        <h2>AFXX <span>Translate AI</span></h2>
+        <p>Translate Beyond Language</p>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#translator">Translator</a>
+      <a href="#features">Features</a>
+      <a href="#history">History</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-badge reveal">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      AI Powered Language Translator
+    </div>
+
+    <h1 class="reveal">
+      Translate Text, Voice & Ideas
+      <span>Instantly with AI</span>
+    </h1>
+
+    <p class="hero-subtitle reveal" id="heroSubtitle"></p>
+
+    <p class="hero-copy reveal">
+      AFXX Translate AI helps users break language barriers with fast,
+      smart and beautiful translation experience.
+    </p>
+
+    <div class="hero-buttons reveal">
+      <a href="#translator" class="primary-btn">
+        Start Translating <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#features" class="secondary-btn">Explore Features</a>
+    </div>
+
+    <div class="stats reveal">
+      <div><h3>100+</h3><p>Languages</p></div>
+      <div><h3>Voice</h3><p>Input Support</p></div>
+      <div><h3>AI</h3><p>Smart Output</p></div>
+    </div>
+  </section>
+
+  <main id="translator" class="translator-section">
+    <div class="section-title reveal">
+      <h2>Smart Translator</h2>
+      <p>Type, speak, translate and listen instantly</p>
+    </div>
+
+    <div class="translator-box">
+      <div class="translate-card glow-card reveal">
+        <div class="card-top">
+          <h3><i class="fa-solid fa-keyboard"></i> Input Text</h3>
+          <select id="fromLang"></select>
+        </div>
+
+        <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+        <div class="card-actions">
+          <button onclick="startVoice()"><i class="fa-solid fa-microphone"></i> Voice</button>
+          <button onclick="clearText()"><i class="fa-solid fa-trash"></i> Clear</button>
+        </div>
+      </div>
+
+      <button class="swap-btn reveal" onclick="swapLang()">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="translate-card glow-card reveal">
+        <div class="card-top">
+          <h3><i class="fa-solid fa-language"></i> Output Text</h3>
+          <select id="toLang"></select>
+        </div>
+
+        <textarea id="outputText" placeholder="Translated output will appear here..." readonly></textarea>
+
+        <div class="card-actions">
+          <button onclick="copyText()"><i class="fa-solid fa-copy"></i> Copy</button>
+          <button onclick="speakOutput()"><i class="fa-solid fa-volume-high"></i> Listen</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="translate-center reveal">
+      <button class="translate-main-btn" onclick="translateText()">
+        <i class="fa-solid fa-bolt"></i> Translate Now
+      </button>
+    </div>
+  </main>
+
+  <section id="features" class="features">
+    <div class="section-title reveal">
+      <h2>Powerful Features</h2>
+      <p>Everything needed for a modern AI translation tool</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal"><i class="fa-solid fa-globe"></i><h3>Multi Language</h3><p>Translate text across multiple global languages.</p></div>
+      <div class="feature-card reveal"><i class="fa-solid fa-microphone-lines"></i><h3>Voice Input</h3><p>Speak directly and convert voice into translated text.</p></div>
+      <div class="feature-card reveal"><i class="fa-solid fa-volume-high"></i><h3>Text to Speech</h3><p>Listen to translated output with speech support.</p></div>
+      <div class="feature-card reveal"><i class="fa-solid fa-clock-rotate-left"></i><h3>History</h3><p>View recent translations saved in your browser.</p></div>
+    </div>
+  </section>
+
+  <section id="history" class="history reveal">
+    <div class="section-title">
+      <h2>Recent Translations</h2>
+      <p>Your latest translated results</p>
+    </div>
+    <div id="historyList" class="history-list"></div>
+  </section>
+
+  <section id="about" class="about reveal">
+    <div class="about-card">
+      <h2>About AFXX Translate AI</h2>
+      <p>
+        AFXX Translate AI is a modern AI-powered language translation website
+        designed and developed by Mohamed Afzhal Wahab. It supports text
+        translation, voice input, text-to-speech, language selection and
+        translation history with a premium responsive interface.
+      </p>
+      <div class="about-tags">
+        <span>AI Project</span><span>Web App</span><span>Voice Support</span><span>Responsive UI</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="reveal">
+    <p>Designed & Developed by <b>Mohamed Afzhal Wahab</b></p>
+    <p>© 2026 AFXX Translate AI. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

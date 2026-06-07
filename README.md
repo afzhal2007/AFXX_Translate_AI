@@ -1,3 +1,14 @@
+## Screenshots
+
+<img src="screenshots/ss4.png" width="300">
+
+<img src="screenshots/ss5.png" width="300">
+
+<img src="screenshots/ss6.png" width="300">
+
+
+
+
 # AFXX Translate AI
 
 Project structure for the AFXX Translate AI web app.
